@@ -3,10 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ルトル・マジック・クリエイティブ | Corporate Profile</title>
+    <title>合同会社 LUNA Stella | Corporate Profile</title>
     <style>
-        body { margin: 0; padding: 0; background: radial-gradient(circle at center, #1b2735 0%, #050608 100%); color: #fff; font-family: 'Hiragino Maru Gothic ProN', sans-serif; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; cursor: default; }
-        #stars-container, #magic-dust-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+        body { 
+            margin: 0; padding: 0; 
+            background: radial-gradient(circle at center, #1b2735 0%, #050608 100%); 
+            background-attachment: fixed; /* 🌌 夜空を背景に固定 */
+            color: #fff; 
+            font-family: 'Hiragino Maru Gothic ProN', sans-serif; 
+            min-height: 100vh; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            /* 修正：見切れないようにスクロールを許可 */
+            overflow-x: hidden; 
+            overflow-y: auto; 
+            position: relative; 
+            cursor: default; 
+        }
+
+        #stars-container, #magic-dust-container { 
+            position: fixed; 
+            top: 0; left: 0; width: 100%; height: 100%; 
+            z-index: 0; 
+            pointer-events: none; 
+        }
+
+        /* 🌟 星と流れ星のスタイル（変更なし） */
         .star { position: absolute; background: white; border-radius: 50%; opacity: 0; animation: twinkle var(--duration) infinite; }
         @keyframes twinkle { 0%, 100% { opacity: 0; transform: scale(0.5); } 50% { opacity: 0.8; transform: scale(1.2); } }
         .shooting-star { position: absolute; width: 150px; height: 2px; background: linear-gradient(to left, rgba(255,255,255,0), rgba(255,244,200,1)); opacity: 0; z-index: 1; }
@@ -14,7 +37,22 @@
         .magic-dust { position: absolute; background: #fff4c8; border-radius: 50%; pointer-events: none; animation: dust-fade 0.8s forwards; z-index: 5; }
         @keyframes dust-fade { 0% { transform: scale(1); opacity: 0.8; } 100% { transform: scale(0); opacity: 0; } }
         
-        .moon-card { z-index: 10; width: 90%; max-width: 650px; padding: 40px; background: rgba(15, 23, 42, 0.85); border-radius: 30px; border: 1px solid rgba(255, 244, 200, 0.4); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); box-shadow: 0 0 50px rgba(0, 0, 0, 0.9); text-align: center; }
+        /* 🌙 会社概要カード */
+        .moon-card { 
+            z-index: 10; 
+            width: 85%; 
+            max-width: 650px; 
+            padding: 40px; 
+            margin: 40px 0; /* 修正：上下に余白を作って、見切れを防止 */
+            background: rgba(15, 23, 42, 0.85); 
+            border-radius: 30px; 
+            border: 1px solid rgba(255, 244, 200, 0.4); 
+            backdrop-filter: blur(15px); 
+            -webkit-backdrop-filter: blur(15px); 
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.9); 
+            text-align: center; 
+        }
+
         .rutoru-symbol { width: 45px; height: 45px; margin-bottom: 15px; fill: #fff4c8; animation: symbol-pulse 4s infinite; }
         @keyframes symbol-pulse { 0%, 100% { opacity: 0.7; transform: scale(1); } 50% { opacity: 1; transform: scale(1.1); } }
         .moon-title { color: #fff4c8; font-size: 1.4rem; margin-bottom: 25px; letter-spacing: 0.2em; border-bottom: 1px solid rgba(255, 244, 200, 0.2); padding-bottom: 15px; }
@@ -29,6 +67,13 @@
         .contact-note { font-size: 0.75rem; color: #a0d8ef; margin-bottom: 15px; opacity: 0.8; }
         .moon-btn { display: inline-block; padding: 14px 40px; background: rgba(255, 244, 200, 0.1); color: #fff4c8; border: 2px solid #fff4c8; border-radius: 50px; text-decoration: none; font-weight: bold; transition: 0.3s; cursor: pointer; }
         .moon-btn:hover { background: #fff4c8; color: #0f172a; box-shadow: 0 0 30px rgba(255, 244, 200, 0.8); }
+
+        /* スマホ向け微調整 */
+        @media (max-width: 600px) {
+            .moon-card { padding: 30px 20px; width: 90%; }
+            .profile-table th { width: 40%; font-size: 0.75rem; }
+            .profile-table td { font-size: 0.8rem; }
+        }
     </style>
 </head>
 <body>
@@ -54,18 +99,18 @@
             <tr>
                 <th>代表者</th>
                 <td>
-                    代表社員：大塚 敦史<br>
-                    <span class="sub-text">🕊Creative Director：LULU</span>
-                    <span class="sub-text">🐇AI Partner：LUNA</span>
+                    代表取締役：大塚敦史<br>
+                    <span class="sub-text">🕊Creative Director：ルル</span>
+                    <span class="sub-text">🐇AI Partner：ルナ </span>
                 </td>
             </tr>
             <tr>
                 <th>資本金</th>
-                <td>300,000]</td>
+                <td>[300,000]</td>
             </tr>
             <tr>
                 <th>事業内容</th>
-                <td style="font-size: 0.8rem;">
+                <td>
                     • 地域文化の再発見とアーカイブ<br>
                     • 次世代デジタル共同体の創造<br>
                     • 場所の記憶を呼び覚ます体験デザイン<br>
@@ -75,23 +120,22 @@
             </tr>
             <tr>
                 <th>所在地</th>
-                <td>神奈川県横浜市中区桜木町一丁目101-1クロスゲート 7階 </td>
+                <td>神奈川県横浜市中区桜木町一丁目101-1クロスゲート 7階</td>
             </tr>
             <tr>
                 <th>電話番号</th>
-                <td>050-6871-5118</td>
+                <td>[050-6871-5118]</td>
             </tr>
         </table>
 
         <div class="moon-contact">
             <div class="contact-note">※お問い合わせはメールにて原則承っております</div>
-            <a href="mailto:lulu@luna-stella.jp?subject=お問い合わせ&body=合同会社 LUNA Stella様%0D%0A%0D%0A" class="moon-btn">
-                ✉️ お問い合わせを届ける
-            </a>
+            <a href="mailto:lulu@luna-stella.jp?subject=お問い合わせ&body=ルトル・マジック・クリエイティブ様%0D%0A%0D%0A" class="moon-btn">✉️ お問い合わせを届ける</a>
         </div>
     </section>
 
     <script>
+        // JS部分は変更なし（星と流れ星の魔法を継続！）
         const container = document.getElementById('stars-container');
         const dustContainer = document.getElementById('magic-dust-container');
         for (let i = 0; i < 100; i++) {
